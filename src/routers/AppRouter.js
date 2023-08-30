@@ -6,6 +6,8 @@ import BlogDetailsPage from "../components/BlogDetailsPage"
 import ContactPage from "../components/ContactPage"
 import Header from "../components/Header"
 import NotFoundPage from "../components/NotFoundPage"
+import AddBlogPage from "../components/AddBlogPage";
+import EditBlogPage from "../components/EditBlogPage";
 
 function AppRouter() {
   return (
@@ -17,6 +19,8 @@ function AppRouter() {
         <Routes>
                 <Route path="/" element={<Homepage/>} exact/>
                 <Route path="/blogs" element={<BlogListPage/>} exact/>
+                <Route path="/create" element={<AddBlogPage/>}/>
+                <Route path="/edit/:id" element={<EditBlogPage/>}/>
                 <Route path="/blogs/:id" element={<BlogDetailsPage/>}/>
                 <Route path="/contact" element={<ContactPage/>}/>
                 <Route path="*" element={<NotFoundPage/>}/>
@@ -27,5 +31,7 @@ function AppRouter() {
     </BrowserRouter>
   );
 }
+
+
 
 export default AppRouter;

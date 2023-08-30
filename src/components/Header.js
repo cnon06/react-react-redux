@@ -7,6 +7,7 @@ const Header = () => {
         <h1>Blog App</h1>
         <NavLink to="/" className={(navData) => (navData.isActive ? "active" : 'none')} >Home</NavLink>
         <NavLink to="/blogs" className={(navData) => (navData.isActive ? "active" : 'none')}>Blogs</NavLink>
+        <NavLink to="/create" className={(navData) => (navData.isActive ? "active" : 'none')}>Create</NavLink>
         <NavLink to="/contact" className={(navData) => (navData.isActive ? "active" : 'none')}>Contact</NavLink>
 
     </div>
